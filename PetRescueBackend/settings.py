@@ -37,6 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'PetRescueBackend.user',
+
 ]
 
 MIDDLEWARE = [
@@ -75,9 +77,32 @@ WSGI_APPLICATION = 'PetRescueBackend.wsgi.application'
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
 DATABASES = {
+    # 'default': {
+    #     # 'ENGINE': 'django.db.backends.sqlite3',
+    #     # 'NAME': BASE_DIR / 'db.sqlite3',
+    #     'ENGINE': 'djongo',
+    #     'NAME': 'PetRescue',
+    #     'ENFORCE_SCHEMA': False,
+    #     'CLIENT': {
+    #         'host': 'mongodb+srv://val:val0527475185@cluster0.xhcwi.mongodb.net/?retryWrites=true&w=majority&ssl=true',
+    #         'username': 'val',
+    #         'password': 'val0527475185'
+    #     }
+    # }
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+
+        'NAME': 'pcjxgmii',
+
+        'USER': 'pcjxgmii',
+
+        'PASSWORD': 'XP1obLcXLn7t2_Of7lsg5lwXkceTxFb2',
+
+        'HOST': 'tiny.db.elephantsql.com',
+
+        'PORT': '5432',
+
     }
 }
 

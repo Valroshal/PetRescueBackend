@@ -5,7 +5,8 @@ from PetRescueBackend.core.serializers.json_serializer import BaseJsonSerializer
 
 @dataclass
 class UserJson(BaseJsonSerializer):
-    name: str
+    id: str
+    first_name: str
+    last_name: str
     email: str
-    phone: str = None
-    user_id: str = None
+

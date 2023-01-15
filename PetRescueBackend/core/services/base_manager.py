@@ -52,10 +52,10 @@ class BaseManager(object):
             include_deleted: bool = False
     ) -> QuerySet[type(BaseModel)]:
         try:
-            if not filters:
-                raise ValidationError('filters empty')
-            if not include_deleted:
-                filters = Q(filters, is_deleted=False)
+            # if filters is None:
+            #     raise ValidationError('filters empty')
+            # if not include_deleted:
+            #     filters = Q(filters, is_deleted=False)
 
             result = self.model.objects.filter(filters)
 
